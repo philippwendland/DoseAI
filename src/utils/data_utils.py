@@ -255,3 +255,16 @@ def read_from_file(filename):
     # load file from pickle
 
     return pickle.load(open(filename, "rb"))
+
+def write_to_file(contents, filename):
+    """
+    It takes in a variable called contents and a variable called filename, and
+    then writes the contents to a pickle file with the name filename.
+
+    contents (str): the data to be written to the file
+    filename (str): the name of the file to write to
+    """
+    # write contents to pickle file
+
+    with open(filename, "wb") as handle:
+        pickle.dump(contents, handle)
